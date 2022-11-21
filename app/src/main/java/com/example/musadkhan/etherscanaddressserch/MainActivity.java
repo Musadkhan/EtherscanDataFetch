@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(searchView.getWindowToken(),InputMethodManager.RESULT_UNCHANGED_SHOWN);
 
-
+                clearField();
 
                 statmentLayout.setVisibility(View.VISIBLE);
                 userUrl = baseUrl+""+query+"&page=1&offset=1&startblock=0&endblock=27025780&sort=desc&apikey=6Q5ZBAYSJVSR31Z34FYXI9ZG24EPQEBA61";
@@ -87,6 +87,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void clearField() {
+        toTxt.setText("To :");
+        fromTxt.setText("From :");
+        blockNoTxt.setText("Block Number :");
+        tokenNameTxt.setText("Token Name :");
+        tokenValueTxt.setText("Token Amount :");
+        tokenSymbolTxt.setText("Token Symbol :");
+        timeStamptxt.setText("Time Stamp :");
+        hashNumberTxt.setText("Hash Number :");
+    }
+
     private void getdata() {
 
         RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
@@ -102,9 +113,7 @@ public class MainActivity extends AppCompatActivity {
                     {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
 
-
                         fromTxt.append(" "+jsonObject.getString("from"));
-
                         String from = jsonObject.getString("from");
                         if (from != userInput){
 
@@ -117,9 +126,6 @@ public class MainActivity extends AppCompatActivity {
                             transactionStatusTxt.setText("OUTGOING TRANSACTION");
                             transactionStatusTxt.setTextColor(Color.RED);
                         }
-
-
-
 
 
                         toTxt.append(" "+jsonObject.getString("to"));
@@ -135,9 +141,6 @@ public class MainActivity extends AppCompatActivity {
                         calendar.setTimeInMillis(TimeStamp*1000L);
                         String date = DateFormat.format("dd-MM-yyyy hh:mm:ss",calendar).toString();
                         timeStamptxt.append(" "+date);
-
-
-
 
                         progressDialog.dismiss();
                     }
