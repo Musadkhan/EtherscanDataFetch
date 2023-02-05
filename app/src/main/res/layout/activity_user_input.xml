@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".userInputActivity">
+
+
+
+<!--    <Button-->
+<!--        android:id="@+id/backBtn"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_margin="30dp"-->
+<!--        android:background="@drawable/back"/>-->
+
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="1/2"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="20sp"-->
+<!--        android:layout_gravity="end"-->
+<!--        style="@style/TextAppearance.Material3.BodyLarge"-->
+<!--        android:layout_marginEnd="30dp"/>-->
+
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progressBar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:progress="5"-->
+<!--        android:progressBackgroundTint="#6597BF"-->
+<!--        style="?android:attr/progressBarStyleHorizontal"/>-->
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="API Validation"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"/>
+
+
+    <TextView
+        android:id="@+id/apiDesciption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please provide your API token from Ether Chain ."
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/google_custom_button"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        app:cardElevation="12dp">
+
+        <EditText
+            android:id="@+id/apiTokenTxt"
+            android:layout_width="match_parent"
+            android:background="@null"
+            android:hint="Enter API token"
+            android:drawableStart="@drawable/ic_baseline_key_24"
+            android:drawablePadding="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_height="?attr/actionBarSize"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <Button
+        android:id="@+id/apiVerifyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="#219EBC"
+        android:padding="10dp"
+        android:text="verify"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <ImageView
+            android:id="@+id/checkImg"
+            android:layout_width="60dp"
+            android:src="@drawable/bluecheck"
+            android:layout_marginEnd="25dp"
+            android:visibility="invisible"
+            android:layout_height="60dp"/>
+
+    <Button
+        android:id="@+id/apiVerifyBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginEnd="15dp"
+        android:textSize="18sp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:text="Verify"/>
+
+    </LinearLayout>
+
+
+
+
+
+    <TextView
+        android:id="@+id/howToTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How To Get Your API Token ?"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#1E2E51"
+        android:textSize="15sp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical" >
+
+
+
+    <ImageButton
+        android:id="@+id/startBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:layout_gravity="end"
+        android:background="@drawable/next"/>
+<!--        android:backgroundTint="#94BEE0"-->
+<!--        android:padding="10dp"-->
+<!--        android:text="Continue"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="18sp" -->
+
+
+    </LinearLayout>
+
+</LinearLayout>
